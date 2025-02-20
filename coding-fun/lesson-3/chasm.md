@@ -1,35 +1,49 @@
 ### @codeStart players set @s makecode 0
 ### @codeStop players set @s makecode 1
 
-### @hideIteration true 
-### @explicitHints 1
+### @flyoutOnly true
+### @hideIteration true
+### @explicitHints true
 
 
-# The great chasm!
+# Разделенная семья!
 
 ## Step 1
-Program the Agent to **build a bridge** across the chasm in the ice. Use ``||agent:set block or item||`` to ensure that the Agent has the necessary materials in the inventory. Select the **oak** as a building material & **64** for the **amount of blocks**. ``||loops:while||`` the Agent does **not** detect blocks down, program the Agent to place the oak planks **down** and move **forward** to create a bridge.    
+Запрограммируй Агента для постройки моста через пропасть. Выдай агенту блоки.
 
-
-```template
-player.onChat("chasm", function () {
-    agent.setItem(PLANKS_OAK, 1, 1)
-    agent.move(FORWARD, 1)
-    while (!(agent.detect(AgentDetection.Block, DOWN))) {
-    	
-    }
-})
-```
+#### ~ tutorialhint 
+Требуемая длина моста - 7 блоков. Не забудь сначала выдать блоки Агенту.
 
 ```ghost
-player.onChat("chasm", function () {
-    agent.setItem(PLANKS_OAK, 64, 1)
+myCustomBlocks.agentSetLimitedItem(7)
+agent.move(FORWARD, 1)
+myCustomBlocks.agentPlaceBlock(DOWN)
+agent.move(FORWARD, 1)
+myCustomBlocks.agentPlaceBlock(DOWN)
+agent.move(FORWARD, 1)
+myCustomBlocks.agentPlaceBlock(DOWN)
+agent.move(FORWARD, 1)
+myCustomBlocks.agentPlaceBlock(DOWN)
+agent.move(FORWARD, 1)
+myCustomBlocks.agentPlaceBlock(DOWN)
+agent.move(FORWARD, 1)
+myCustomBlocks.agentPlaceBlock(DOWN)
+agent.move(FORWARD, 1)
+myCustomBlocks.agentPlaceBlock(DOWN)
+
+for (let i = 0; i < 7; i++) {
     agent.move(FORWARD, 1)
-    while (!(agent.detect(AgentDetection.Block, FORWARD))) {
-        agent.place(DOWN)
-        agent.move(FORWARD, 1)
-    }
-})
+    myCustomBlocks.agentPlaceBlock(DOWN)
+}
 
 ``` 
 
+```template
+myCustomBlocks.agentSetLimitedItem(1)
+agent.move(FORWARD, 1)
+myCustomBlocks.agentPlaceBlock(DOWN)
+```
+
+```package
+minecraft-hoc22=github:fc-minecraft/edu-fabric-ts#v0.0.61
+```
