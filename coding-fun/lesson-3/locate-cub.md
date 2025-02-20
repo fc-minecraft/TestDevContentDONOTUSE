@@ -15,14 +15,19 @@
 Нужно выкопать путь высотой 2 блока и длиной 9 блоков.
 
 ```template
-agent.move(FORWARD, 1)
-agent.destroy(FORWARD)
+for (let i = 0; i < 2; i++) {
+    agent.destroy(FORWARD)
+    agent.move(FORWARD, 1)
+}
 ```
 
 ```ghost
 agent.destroy(FORWARD)
 agent.move(FORWARD, 1)
 agent.destroy(UP)
+for (let i = 0; i < 7; i++) {
+    agent.move(FORWARD, 1)
+}
 ``` 
 
 
