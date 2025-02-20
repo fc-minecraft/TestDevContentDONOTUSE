@@ -82,7 +82,7 @@
         "coding-fun/lesson-18.md"
     ],
     "targetVersions": {
-        "target": "1.6.8",
+        "target": "2.0.30",
         "targetId": "minecraft"
     },
     "supportedTargets": [
