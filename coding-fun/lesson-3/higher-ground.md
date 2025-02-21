@@ -28,6 +28,7 @@ myCustomBlocks.agentSetLimitedItemLadder(1)
     agent.move(UP, 1)
 }
 agent.move(DOWN, 10)
+agent.turn(LEFT_TURN)
 
 ``` 
 ```template

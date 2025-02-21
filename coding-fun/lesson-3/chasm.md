@@ -36,6 +36,8 @@ for (let i = 0; i < 7; i++) {
     myCustomBlocks.agentPlaceBlock(DOWN)
 }
 
+agent.turn(LEFT_TURN)
+
 ``` 
 
 ```template
