@@ -3,9 +3,9 @@
 ### @explicitHints 1
 
 
-# No code is required for this activity. 
+# Сейчас писать код не требуется.
 ## Step 1
-No code is required for this activity. 
+Сейчас не нужно писать код.
 
 ```template
 player.onChat("run", function () {
