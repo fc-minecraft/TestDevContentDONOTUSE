@@ -1,15 +1,14 @@
 ### @codeStart players set @s makecode 0
 ### @codeStop players set @s makecode 1
 
-### @hideIteration true 
-### @flyoutOnly 1
-### @explicitHints 1
+### @flyoutOnly true
+### @hideIteration true
+### @explicitHints true
 
-
-# Program the Agent to collect all the garbage!
+# Запрограммируй Агента собрать весь мусор!
 
 ## Step 1
-Use the Agent to clear the turtle tracks by using ``||agent: agent destroy||`` & ``||agent:agent collect all||``blocks. Try using a ``||loops:repeat||`` block to make the code more efficient. When done, press the **Play** button to compile the code. Don't forget to run your code in Minecraft. 
+Запрограммируй Агента, чтобы очистить тропинку черепашки, с помощью блоков **агент: уничтожить** и **агент: собрать все**. Попробуй использовать блок **повторить**, чтобы сделать код более кратким.
 
 
 ```ghost
@@ -21,4 +20,9 @@ player.onChat("garbage", function () {
         agent.collectAll()
     }
 })
+```
+```template
+for (let index = 0; index < 3; index++) {
+    agent.move(FORWARD, 1)
+}
 ```

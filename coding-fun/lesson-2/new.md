@@ -3,9 +3,10 @@
 ### @explicitHints 1
 
 
-# No code is required for this activity. 
+# Для этого задания код не требуется.
 ## Step 1
-No code is required for this activity. 
+Для этого задания код не требуется.
+
 
 ```blocks
 player.onChat("run", function () {
