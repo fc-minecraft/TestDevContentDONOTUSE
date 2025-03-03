@@ -2,10 +2,11 @@
 ### @flyoutOnly 1
 
 
-# No code is required for this activity. 
+# Сейчас писать код не требуется.
+## Step 1
+Сейчас не нужно писать код.
 
-```blocks
-loops.onStart()
+```template
+player.onChat("run", function () {
+})
 ```
-
-
