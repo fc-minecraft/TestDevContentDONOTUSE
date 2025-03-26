@@ -3,7 +3,7 @@
 
 ### @hideIteration true 
 ### @explicitHints 1
-
+### @flyoutOnly true
 
 # Тренировочная площадка
 
