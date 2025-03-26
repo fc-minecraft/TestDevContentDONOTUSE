@@ -5,29 +5,25 @@
 ### @explicitHints 1
 
 
-# Surroundings 
+# Окружение
 
 ## Step 1
-While the Agent is **inspecting the block down** and the block is **stone**, the Agent needs to **move forward**. If the Agent does **not** detect a block forward, the Agent needs to **move forward**, otherwise it needs to **turn left**. 
+Пока Агент **осматривает блок внизу** и блок является **камнем**, Агенту нужно **двигаться вперёд**. Если Агент **не** обнаруживает блок впереди, ему также нужно двигаться вперёд, в противном случае ему нужно **повернуть налево**.
 
 
 ```template
-player.onChat("inspect", function () {
-    while (agent.inspect(AgentInspection.Block, DOWN) == STONE) {
-        
-    }
-})
+while (agent.inspect(AgentInspection.Block, DOWN) == STONE) {
+    
+}
 ```
 
 ```ghost
-player.onChat("inspect", function () {
-    while (agent.inspect(AgentInspection.Block, DOWN) == STONE) {
-        if (!(agent.detect(AgentDetection.Block, FORWARD))) {
-            agent.move(FORWARD, 1)
-        } else {
-            agent.turn(LEFT_TURN)
-        }
+while (agent.inspect(AgentInspection.Block, DOWN) == STONE) {
+    if (!(agent.detect(AgentDetection.Block, FORWARD))) {
+        agent.move(FORWARD, 1)
+    } else {
+        agent.turn(LEFT_TURN)
     }
-})
+}
 ```
 

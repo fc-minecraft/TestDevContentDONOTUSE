@@ -5,20 +5,22 @@
 ### @explicitHints 1
 
 
-# Locate the Sample! 
+# Найди образец!
 
 ## Step 1
-**While** the Agent **inspects the block down** and does **not** find **blue ice**, program the Agent to **destroy** and **move down**. When the Agent locates the **blue ice**, it needs to **destroy down** and **collect** the sample. 
+**Пока** Агент **осматривает блок внизу** и **не** находит **голубого льда**, запрограммируй Агента, чтобы он **разрушал** и **двигался вниз**. Когда Агент находит **голубой лёд**, ему нужно **разрушить внизу** и **собрать** образец.
+
+
+```template
+agent.move(FORWARD, 1)
+```
 
 ```ghost 
-player.onChat("ice", function () {
-    while (agent.inspect(AgentInspection.Block, DOWN) != ICE) {
-        agent.destroy(DOWN)
-        agent.move(DOWN, 1)
-    }
+while (agent.inspect(AgentInspection.Block, DOWN) != ICE) {
     agent.destroy(DOWN)
-    agent.collectAll()
-    
-})
+    agent.move(DOWN, 1)
+}
+agent.destroy(DOWN)
+agent.collectAll()
 ```
 

@@ -5,13 +5,16 @@
 ### @explicitHints 1
 
 
-# Holodeck 
+# Тренировочная площадка
 
 ## Step 1
-Use this holodeck to sharpen your skills! 
+Используй эту площадку, чтобы потренироваться и улучшить свои навыки!
+
+```template
+agent.move(FORWARD, 1)
+```
 
 ```ghost
-player.onChat("3", function () {
     while (agent.inspect(AgentInspection.Block, FORWARD) != GOLD_BLOCK) {
         if (!(agent.detect(AgentDetection.Block, FORWARD))) {
             agent.move(FORWARD, 1)
@@ -27,5 +30,4 @@ agent.till(FORWARD)
 agent.collect(IRON_SHOVEL)
 agent.setSlot(1)
 agent.transfer(1, 1, 2)
-})
 ```

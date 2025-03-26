@@ -5,30 +5,27 @@
 ### @explicitHints 1
 
 
-# 3d Space
+# 3D Пространство
 
 ## Step 1
-To solve this challenge, you need to program the Agent to get to the **gold** block and collect it. The Agent needs to do it first on the ground level and then **move 3 levels up** and repeat the previous procedure.  
+Чтобы решить этот вызов, тебе нужно запрограммировать Агента, чтобы он добрался до **золотого** блока и собрал его. Агенту нужно сначала сделать это на уровне земли, а затем **подняться на 3 уровня вверх** и повторить это снова.
+
 
 ```template
-player.onChat("3D", function () {
-    for (let index = 0; index < 2; index++) {
-        
-})
+for (let index = 0; index < 2; index++) {  
+}
 ``` 
 ```ghost
-player.onChat("3D", function () {
-    for (let index = 0; index < 2; index++) {
-        while (agent.inspect(AgentInspection.Block, FORWARD) != GOLD_BLOCK) {
-            if (!(agent.detect(AgentDetection.Block, FORWARD))) {
-                agent.move(FORWARD, 1)
-            } else {
-                agent.turn(LEFT_TURN)
-            }
+for (let index = 0; index < 2; index++) {
+    while (agent.inspect(AgentInspection.Block, FORWARD) != GOLD_BLOCK) {
+        if (!(agent.detect(AgentDetection.Block, FORWARD))) {
+            agent.move(FORWARD, 1)
+        } else {
+            agent.turn(LEFT_TURN)
         }
-        agent.destroy(FORWARD)
-        agent.collectAll()
-        agent.move(UP, 3)
     }
-})
+    agent.destroy(FORWARD)
+    agent.collectAll()
+    agent.move(UP, 3)
+}
 ```

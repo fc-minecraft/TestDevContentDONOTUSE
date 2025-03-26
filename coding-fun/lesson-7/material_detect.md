@@ -5,32 +5,28 @@
 ### @explicitHints 1
 
 
-# Detecting your first material
+# Обнаружение первого материала
 
 ## Step 1
-The Agent needs to **destroy** and then **collect** the **gold** block. 
+Агенту нужно **разрушить** и затем **собрать** **золотой** блок.
 
 ```template
-player.onChat("material", function () {
-    for (let index = 0; index < 3; index++) {
-        agent.move(LEFT, 1)
-        if (agent.inspect(AgentInspection.Block, FORWARD) == GOLD_BLOCK) {
-            
-        }
+for (let index = 0; index < 3; index++) {
+    agent.move(LEFT, 1)
+    if (agent.inspect(AgentInspection.Block, FORWARD) == GOLD_BLOCK) {
+        
     }
-})
+}
 ```
 
 ```ghost
-player.onChat("1", function () {
-    for (let index = 0; index < 3; index++) {
-        agent.move(LEFT, 1)
-        if (agent.inspect(AgentInspection.Block, FORWARD) == GOLD_BLOCK) {
-            agent.destroy(FORWARD)
-            agent.collectAll()
-        }
+for (let index = 0; index < 3; index++) {
+    agent.move(LEFT, 1)
+    if (agent.inspect(AgentInspection.Block, FORWARD) == GOLD_BLOCK) {
+        agent.destroy(FORWARD)
+        agent.collectAll()
     }
-})
+}
 ```
 
 

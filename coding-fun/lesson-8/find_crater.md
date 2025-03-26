@@ -5,25 +5,21 @@
 ### @explicitHints 1
 
 
-# Surroundings 
+# Окружение
 
 ## Step 1
-While the Agent **detects the block down**, it needs to move forward. If the Agent **inspects the block down** and finds **air**, then use ``||player:say||`` command to say **Crater found!**. 
+Пока Агент **обнаруживает блок внизу**, ему нужно двигаться вперёд. Если Агент **осматривает блок внизу** и находит **воздух**, используй команду **сказать**, чтобы сказать **Кратер найден!**
 
 
 
 ```template
-player.onChat("crater", function () {
-            player.say("Crater found!")
-})
+            player.say("")
 ```
 ```ghost
-player.onChat("1", function () {
     while (agent.detect(AgentDetection.Block, DOWN)) {
         agent.move(FORWARD, 1)
     }
     if (agent.inspect(AgentInspection.Block, DOWN) == AIR) {
-        player.say("Crater found!")
+        player.say("Кратер найден!")
     }
-})
 ```
