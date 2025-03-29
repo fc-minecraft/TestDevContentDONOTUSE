@@ -25,5 +25,12 @@ while (agent.inspect(AgentInspection.Block, DOWN) == STONE) {
         agent.turn(LEFT_TURN)
     }
 }
+while (agent.inspect(AgentInspection.Block, FORWARD) != GOLD_BLOCK) {
+    if (agent.detect(AgentDetection.Block, FORWARD) == false) {
+        agent.move(FORWARD, 1)
+    } else if (agent.detect(AgentDetection.Block, FORWARD) == true) {
+        agent.turn(LEFT_TURN)
+    }
+}
 ```
 
