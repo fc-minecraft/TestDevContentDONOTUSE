@@ -12,7 +12,7 @@
 
 ```template
 while (true) {
-    if (true) {
+    if (0 != 0) {
     } else {
     }
 }
