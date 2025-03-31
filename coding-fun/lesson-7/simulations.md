@@ -16,11 +16,11 @@
 
 ```template
 while (agent.inspect(AgentInspection.Block, FORWARD) != GOLD_BLOCK) {
-    if (agent.inspect(AgentInspection.Block, LEFT) == GOLD_BLOCK) {
+    if (true == true) {
         
     }
     if (agent.detect(AgentDetection.Block, FORWARD)) {
-        agent.turn(LEFT_TURN)
+
     }
 }
 
