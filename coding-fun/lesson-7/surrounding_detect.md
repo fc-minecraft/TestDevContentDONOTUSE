@@ -13,7 +13,9 @@
 
 ```template
 while (agent.inspect(AgentInspection.Block, DOWN) == STONE) {
-    
+    if (true) {
+    } else {
+    }
 }
 ```
 
