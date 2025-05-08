@@ -5,22 +5,21 @@
 ### @explicitHints 1
 
 
-# Columns!
+# Колонны!
 
 ## Step 1
-Time to build the aqueducts! First, create ``||variable: length||`` and ``||variable: segments||`` variables. Then ``||variable: set length||`` to **5** and ``||variable: set segments||`` to **6** ``||loops: on start||``. 
+Время строить акведуки! Сначала создай переменные ``||variable: длина||`` и ``||variable: сегменты||``. Затем ``||variable: установить длину||`` в **5** и ``||variable: установить сегменты||`` в **6** ``||loops: при старте||``.
 
 ## Step 2
-Now within an ``||player: on chat command||`` you need to add all the actions that the Agent needs to perform in order to build **1** part: ``||agent: set block pillar of quartz||`` at the count of **64**, ``||agent: place||`` and ``||agent: move forward||``. Water in Minecraft will flow if there is a slope, so the Agent needs to **place left, right and down**. Place all these actions within a ``||loops: repeat||`` loop that **repeats** ``||variable: length||`` times. 
+Теперь внутри ``||player: по команде чата||`` тебе нужно добавить все действия, которые Агент должен выполнить, чтобы построить **1** часть: ``||agent: установить блок колонны из кварца||`` в количестве **64**, ``||agent: разместить||`` и ``||agent: двигаться вперёд||``. Вода в Minecraft будет течь, если есть уклон, поэтому Агенту нужно **разместить влево, вправо и вниз**. Помести все эти действия внутри цикла ``||loops: повторить||``, который **повторяется** ``||variable: длина||`` раз.
 
 ## Step 3
-Now nest the first ``||loops: repeat||`` loop within another ``||loops: repeat||`` loop that repeats ``||variables:segments||`` times. Try it out in Minecraft!
+Теперь вложи первый цикл ``||loops: повторить||`` в другой цикл ``||loops: повторить||``, который повторяется ``||variables:сегменты||`` раз. 
 
 ### ~ tutorialHint
-Add ``||agent: agent move down||`` block before the inner loop to make the code work!
+Добавь блок ``||agent: агент двигаться вниз||`` перед внутренним циклом, чтобы код работал!
 
 ```ghost
-player.onChat("build", function () {
     agent.move(DOWN, 1)
     for (let index = 0; index < Segments; index++) {
         for (let index = 0; index < length; index++) {
@@ -32,9 +31,16 @@ player.onChat("build", function () {
         }
         agent.move(DOWN, 1)
     }
-})
 let Segments = 0
 let length = 0
 length = 5
 Segments = 6
+```
+```template
+agent.move(DOWN, 1)
+for (let index = 0; index < 0; index++) {
+    for (let index = 0; index < 0; index++) {
+        agent.setItem(WHITE_CONCRETE, 64, 1)
+    }
+}
 ```
