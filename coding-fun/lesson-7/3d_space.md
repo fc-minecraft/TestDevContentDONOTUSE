@@ -12,6 +12,22 @@
 
 #### ~ tutorialhint
 Помести **ЕСЛИ ИНАЧЕ** в цикл **ПОКА**. Напиши в чат "3D" (буква D - английская) для запуска кода.
+```blocks
+for (let index = 0; index < 2; index++) {
+    while (agent.inspect(AgentInspection.Block, FORWARD) != GOLD_BLOCK) {
+        if (!(agent.detect(AgentDetection.Block, FORWARD))) {
+
+        } else {
+
+        }
+    }
+    agent.destroy(FORWARD)
+    agent.collectAll()
+    agent.move(UP, 3)
+}
+```
+
+
 
 ```template
 player.onChat("3D", function () {
