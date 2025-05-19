@@ -3,6 +3,7 @@
 
 ### @hideIteration true
 ### @explicitHints 1
+### @flyoutOnly true
 
 # Окружение
 
